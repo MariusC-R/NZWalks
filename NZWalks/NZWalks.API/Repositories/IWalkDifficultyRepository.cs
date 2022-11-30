@@ -4,9 +4,9 @@ namespace NZWalks.API.Repositories
 {
     public interface IWalkDifficultyRepository
     {
-        Task<IEnumerable<WalkDifficulty>> GetAsync();
+        Task<IEnumerable<WalkDifficulty>> GetAllAsync();
 
-        Task<WalkDifficulty> GetSingleAsync(Guid id);
+        Task<WalkDifficulty> GetAsync(Guid id);
 
         Task<WalkDifficulty> AddAsync(WalkDifficulty walkDifficulty);
 

@@ -34,12 +34,12 @@ namespace NZWalks.API.Repositories
             return walkDifficulty;
         }
 
-        public async Task<IEnumerable<WalkDifficulty>> GetAsync()
+        public async Task<IEnumerable<WalkDifficulty>> GetAllAsync()
         {
             return await dbContext.WalkDifficulty.ToListAsync();
         }
 
-        public async Task<WalkDifficulty> GetSingleAsync(Guid id)
+        public async Task<WalkDifficulty> GetAsync(Guid id)
         {
             var walkDifficulty = await dbContext.WalkDifficulty.FirstOrDefaultAsync(x => x.Id == id);
             if (walkDifficulty == null)
